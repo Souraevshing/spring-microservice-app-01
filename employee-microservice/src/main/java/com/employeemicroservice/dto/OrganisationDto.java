@@ -1,5 +1,6 @@
 package com.employeemicroservice.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,8 +14,12 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class OrganisationDto {
     private Long id;
+    @Schema( name = "organisationName", description = "organisationName" )
     private String organisationName;
+    @Schema( name = "organisationDescription", description = "organisationDescription" )
     private String organisationDescription;
+    @Schema( name = "organisationCode", description = "organisationCode" )
     private String organisationCode;
+    @Schema( name = "createdDate", description = "createdDate" )
     private LocalDateTime createdDate;
 }
